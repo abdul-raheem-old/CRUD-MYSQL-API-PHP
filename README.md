@@ -33,9 +33,27 @@ $con->insert_row('users', $data); # List of all fields to insert.
 
 ### 3. Delete Row
 ```php
-con->delete_row([TABLE_NAME], [FIELD_NAME], [KEY]);
+$con->delete_row([TABLE_NAME], [FIELD_NAME], [KEY]);
 ```
 Example:
 ```php
-con->delete_row('users', 'users_id', '3');
+$con->delete_row('users', 'users_id', '3');
+```
+
+### 4. Update Row
+```php
+$con->update_row([TABLE_NAME], [FIELD_NAME], [DATA], [KEY], [VALUE]);
+```
+Example:
+```php
+$con->update_row('users', 'users_email', 'user@domin.com', 'users_id', '1');
+```
+
+### 5. Get Field Value
+```php
+$con->get_field_value([TABLE_NAME], [KEY], [VALUE], [FIELD_NAME]);
+```
+Example:
+```php
+$con->get_field_value('users', 'users_id', '3', 'users_email');
 ```
