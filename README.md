@@ -29,4 +29,4 @@ Example:
 $data = ['ARHEX', 'LABS', 'arhexlabs@gmail.com'];
 $con->insert_row('users', $data); # List of all fields to insert.
 ```
-````Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.````
+``Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.``
