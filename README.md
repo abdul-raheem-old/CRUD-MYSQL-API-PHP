@@ -11,7 +11,7 @@ Copy the files in core directory of project.
 Done...
 
 ## USAGE
-### Establish Connection
+### 1. Establish Connection
 ```php
 $con = new DB('DATABASE_HOST', 'DATABASE_NAME', 'DATABASE_USERNAME', 'DATABASE_PASSWORD');
 ```
@@ -19,7 +19,7 @@ Example:
 ```php
 $con = new DB('127.0.0.1', 'myDB', 'root', 'toor');
 ```
-### Insert Row
+### 2. Insert Row
 ```php
 $ARRAY_OF_DATA = [FIELD_1, FIELD_2, ....];
 $con->insert_row([TABLE_NAME], [ARRAY_OF_DATA]); # List of all fields to insert.
@@ -29,4 +29,4 @@ Example:
 $data = ['ARHEX', 'LABS', 'arhexlabs@gmail.com'];
 $con->insert_row('users', $data); # List of all fields to insert.
 ```
-``Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.``
+``````Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.``````
