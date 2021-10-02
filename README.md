@@ -19,3 +19,14 @@ Example:
 ```php
 $con = new DB('127.0.0.1', 'myDB', 'root', 'toor');
 ```
+### Insert Row
+```php
+$ARRAY_OF_DATA = [FIELD_1, FIELD_2, ....];
+$con->insert_row([TABLE_NAME], [ARRAY_OF_DATA]); # List of all fields to insert.
+```
+Example:
+```php
+$data = ['ARHEX', 'LABS', 'arhexlabs@gmail.com'];
+$con->insert_row('users', $data); # List of all fields to insert.
+```
+````Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.````
