@@ -6,7 +6,7 @@ Very easy to use PDO MYSQL API. Just Include in PHP file and get it working.
 ```bash
 git clone [URL]
 ```
-#### Step 2.
+#### Step 2:
 Copy the files in core directory of project.
 Done...
 
@@ -56,4 +56,13 @@ $con->get_field_value([TABLE_NAME], [KEY], [VALUE], [FIELD_NAME]);
 Example:
 ```php
 $con->get_field_value('users', 'users_id', '3', 'users_email');
+```
+
+### 6. Get Last Id
+```php
+$con->get_last_id([TABLE_NAME], [NAME_OF_PRIMARY_KEY_FIELD]);
+```
+Example:
+```php
+$con->get_last_id('users', users_id);
 ```
