@@ -91,11 +91,12 @@ Return a single row using **table name**, **key** and **value**.
 
 **Exmaple:**
 ```php
-$con->
+$row = $con->get_row('users', 'users_id', '3');
+$email = $row[0]['users_email'];
 ```
 **Syntax:**
 ```php
-$con->
+$con->get_row([TABLE_NAME], [Key], [VALUE]);
 ```
 
 ### 8. Get All Rows
@@ -103,11 +104,14 @@ Return all rows using **table name**, **key** and **value**.
 
 **Example:**
 ```php
-
+$row = $con->get_row('users', 'users_id', '3');
+$email_1 = $row[0]['users_email'];
+$email_2 = $row[1]['users_email'];
+$name_3 = $row[2]['users_email'];
 ```
 **Syntax:**
 ```php
-
+$con->get_row([TABLE_NAME], [Key], [VALUE]);
 ```
 
 ### 9. Read Table
@@ -115,9 +119,9 @@ Return all selected table rows using only **table name**.
 
 **Example:**
 ```php
-
+$con->read_table('posts');
 ```
 **Syntax:**
 ```php
-
+$con->read_table([TABLE_NAME]);
 ```
