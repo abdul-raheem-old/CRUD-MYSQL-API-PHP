@@ -93,8 +93,4 @@
 
     }
 
-    $con = new DB("127.0.0.1", "social_media", "arhex", "toor");
-    $row = $con->get_row('users', 'users_fname', 'Abdul');
-    echo $row[0]['users_email'];
-
 ?>
