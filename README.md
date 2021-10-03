@@ -4,7 +4,7 @@ Very easy to use PDO MYSQL API. Just Include in PHP file and get it working.
 ## INSTALATION 
 #### Step 1:
 ```bash
-git clone https://github.com/arhex-labs/PDO-MYSQL-API
+git clone https://github.com/arhex-labs/CRUD-MYSQL-API-PHP.git
 ```
 #### Step 2:
 Copy the files in core directory of project.
