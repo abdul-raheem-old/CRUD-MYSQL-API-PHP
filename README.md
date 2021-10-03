@@ -87,5 +87,37 @@ $con->get_last_id([TABLE_NAME], [NAME_OF_PRIMARY_KEY_FIELD]);
 ```
 
 ### 7. Get Single Row
+Return a single row using **table name**, **key** and **value**.
+
+**Exmaple:**
+```php
+$con->
+```
+**Syntax:**
+```php
+$con->
+```
+
 ### 8. Get All Rows
+Return all rows using **table name**, **key** and **value**.
+
+**Example:**
+```php
+
+```
+**Syntax:**
+```php
+
+```
+
 ### 9. Read Table
+Return all selected table rows using only **table name**.
+
+**Example:**
+```php
+
+```
+**Syntax:**
+```php
+
+```
