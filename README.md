@@ -100,7 +100,7 @@ $con->get_row([TABLE_NAME], [Key], [VALUE]);
 ```
 
 ### 8. Get All Rows
-Return all rows using **table name**, **key** and **value**.
+Return all selected rows using **table name**, **key** and **value**.
 
 **Example:**
 ```php
