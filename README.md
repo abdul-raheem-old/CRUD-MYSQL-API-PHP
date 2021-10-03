@@ -78,3 +78,7 @@ $con->get_last_id('users', users_id);
 ```php
 $con->get_last_id([TABLE_NAME], [NAME_OF_PRIMARY_KEY_FIELD]);
 ```
+
+### 7. Get Single Row
+### 8. Get All Rows
+### 9. Read Table
