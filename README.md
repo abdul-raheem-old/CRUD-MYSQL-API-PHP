@@ -125,3 +125,6 @@ $con->read_table('posts');
 ```php
 $con->read_table([TABLE_NAME]);
 ```
+
+## Credits
+#### Developer: Abdul Raheem (ARHEX)
