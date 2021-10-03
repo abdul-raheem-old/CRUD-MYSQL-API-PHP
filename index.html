@@ -1,8 +1,180 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
-    <title>Hello</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/CRUD-MYSQL-API-PHP/assets/css/style.css?v=72d42aa9ffc6f9099e1e88162126ec02037388d2">
+    <meta name="google-site-verification" content="Xy54KP91wsdG7iR7qmugpsIR4exQLGId96r9-plknqY" />
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/CRUD-MYSQL-API-PHP/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>CRUD-MYSQL-API | CRUD-MYSQL-API-PHP</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="CRUD-MYSQL-API" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Very easy to use PDO MYSQL API. Just Include in PHP file and get it working." />
+<meta property="og:description" content="Very easy to use PDO MYSQL API. Just Include in PHP file and get it working." />
+<link rel="canonical" href="https://arhex-labs.github.io/CRUD-MYSQL-API-PHP/" />
+<meta property="og:url" content="https://arhex-labs.github.io/CRUD-MYSQL-API-PHP/" />
+<meta property="og:site_name" content="CRUD-MYSQL-API-PHP" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CRUD-MYSQL-API" />
+<script type="application/ld+json">
+{"description":"Very easy to use PDO MYSQL API. Just Include in PHP file and get it working.","url":"https://arhex-labs.github.io/CRUD-MYSQL-API-PHP/","@type":"WebSite","headline":"CRUD-MYSQL-API","name":"CRUD-MYSQL-API-PHP","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
   </head>
+
   <body>
-    <h1>World</h1>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/CRUD-MYSQL-API-PHP/">
+          <h1>CRUD-MYSQL-API-PHP</h1>
+        </a>
+        <h2>Very easy to use PDO MYSQL API. Just Include in PHP file and get it working.</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/arhex-labs/CRUD-MYSQL-API-PHP" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1 id="crud-mysql-api">CRUD-MYSQL-API</h1>
+<p>Very easy to use PDO MYSQL API. Just Include in PHP file and get it working.</p>
+
+<h2 id="instalation">INSTALATION</h2>
+<h4 id="step-1">Step 1:</h4>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/arhex-labs/CRUD-MYSQL-API-PHP.git
+</code></pre></div></div>
+<h4 id="step-2">Step 2:</h4>
+<p>Copy the files in core directory of project.
+Done.</p>
+
+<h2 id="usage">USAGE</h2>
+<h3 id="1-establish-connection">1. Establish Connection</h3>
+<p>Establish a connection between server and database.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DB</span><span class="p">(</span><span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="s1">'myDB'</span><span class="p">,</span> <span class="s1">'root'</span><span class="p">,</span> <span class="s1">'toor'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DB</span><span class="p">(</span><span class="s1">'DATABASE_HOST'</span><span class="p">,</span> <span class="s1">'DATABASE_NAME'</span><span class="p">,</span> <span class="s1">'DATABASE_USERNAME'</span><span class="p">,</span> <span class="s1">'DATABASE_PASSWORD'</span><span class="p">);</span>
+</code></pre></div></div>
+<h3 id="2-insert-row">2. Insert Row</h3>
+<p>Insert a row in database table.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ARHEX'</span><span class="p">,</span> <span class="s1">'LABS'</span><span class="p">,</span> <span class="s1">'arhexlabs@gmail.com'</span><span class="p">];</span>
+<span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">insert_row</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span> <span class="c1"># List of all fields to insert.</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Note: ID AUTOINCREMENT FIELD IS AUTOMATICALLY ADDED.</code></p>
+
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ARRAY_OF_DATA</span> <span class="o">=</span> <span class="p">[</span><span class="no">FIELD_1</span><span class="p">,</span> <span class="no">FIELD_2</span><span class="p">,</span> <span class="mf">....</span><span class="p">];</span>
+<span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">insert_row</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">ARRAY_OF_DATA</span><span class="p">]);</span> <span class="c1"># List of all fields to insert.</span>
+</code></pre></div></div>
+
+<h3 id="3-delete-row">3. Delete Row</h3>
+<p>Delete a row in database table by using <strong>field name</strong> and <strong>key</strong>.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">delete_row</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'users_id'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">delete_row</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">FIELD_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">KEY</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="4-update-row">4. Update Row</h3>
+<p>Update a row in database table using <strong>key</strong> to select row and <strong>field name</strong> to update data.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">update_row</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'users_email'</span><span class="p">,</span> <span class="s1">'user@domin.com'</span><span class="p">,</span> <span class="s1">'users_id'</span><span class="p">,</span> <span class="s1">'1'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">update_row</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">FIELD_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">DATA</span><span class="p">],</span> <span class="p">[</span><span class="no">KEY</span><span class="p">],</span> <span class="p">[</span><span class="no">VALUE</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="5-get-field-value">5. Get Field Value</h3>
+<p>Return field value from selected database table using <strong>key</strong> to select row and <strong>field name</strong> to select field.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_field_value</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'users_id'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'users_email'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Snytax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_field_value</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">KEY</span><span class="p">],</span> <span class="p">[</span><span class="no">VALUE</span><span class="p">],</span> <span class="p">[</span><span class="no">FIELD_NAME</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="6-get-last-id">6. Get Last Id</h3>
+<p>Return the last row in database table sorted by primary integer keys.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_last_id</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="n">users_id</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_last_id</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="no">NAME_OF_PRIMARY_KEY_FIELD</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="7-get-single-row">7. Get Single Row</h3>
+<p>Return a single row using <strong>table name</strong>, <strong>key</strong> and <strong>value</strong>.</p>
+
+<p><strong>Exmaple:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_row</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'users_id'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">);</span>
+<span class="nv">$email</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'users_email'</span><span class="p">];</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_row</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="nc">Key</span><span class="p">],</span> <span class="p">[</span><span class="no">VALUE</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="8-get-all-rows">8. Get All Rows</h3>
+<p>Return all selected rows using <strong>table name</strong>, <strong>key</strong> and <strong>value</strong>.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_row</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="s1">'users_id'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">);</span>
+<span class="nv">$email_1</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'users_email'</span><span class="p">];</span>
+<span class="nv">$email_2</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">'users_email'</span><span class="p">];</span>
+<span class="nv">$name_3</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">'users_email'</span><span class="p">];</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">get_row</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">],</span> <span class="p">[</span><span class="nc">Key</span><span class="p">],</span> <span class="p">[</span><span class="no">VALUE</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="9-read-table">9. Read Table</h3>
+<p>Return all selected table rows using only <strong>table name</strong>.</p>
+
+<p><strong>Example:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">read_table</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><strong>Syntax:</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$con</span><span class="o">-&gt;</span><span class="nf">read_table</span><span class="p">([</span><span class="no">TABLE_NAME</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="credits">Credits</h2>
+<h4 id="developer-abdul-raheem-arhex">Developer: Abdul Raheem (ARHEX)</h4>
+
+      </section>
+    </div>
   </body>
 </html>
